@@ -1,0 +1,14 @@
+# pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poc
+  labels:
+    app: poc
+    component: netcore-app
+spec:
+  containers:
+    - image: skkpocacr.azurecr.io/poc:0.0.1
+      name: webapi
+      ports:
+        - containerPort: 80
