@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: poc
+  name: s2
   labels:
-    app: poc
+    app: s2
     component: netcore-app
 spec:
   containers:
-    - image: skkpocacr.azurecr.io/poc:0.0.1
+    - image: skkpocacr.azurecr.io/s2:0.0.1
       name: webapi
       ports:
         - containerPort: 80

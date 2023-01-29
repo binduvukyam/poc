@@ -6,11 +6,6 @@ namespace poc.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<WeatherForecastController> _logger;
     private int iteration = 11;
 
@@ -20,7 +15,7 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    public String Get()
     {
         _logger.LogDebug($"Debug {iteration}");
         _logger.LogInformation($"Information {iteration}");  
@@ -28,12 +23,6 @@ public class WeatherForecastController : ControllerBase
         _logger.LogError($"Error {iteration}");  
         _logger.LogCritical($"Critical {iteration}");
 
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+        return "Weather from service-1";
     }
 }
