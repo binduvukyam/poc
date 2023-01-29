@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS builder
 WORKDIR /src
 
-COPY ./s1/s1.csproj .
-RUN dotnet restore s1/s1.csproj
+COPY ./s1.csproj .
+RUN dotnet restore s1.csproj
 COPY . .
 RUN dotnet build s1.csproj -c Debug -o /src/out/s1
 

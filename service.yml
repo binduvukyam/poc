@@ -22,10 +22,10 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /s1/*
         backend:
           service:
             name: s1
             port:
               number: 80
-        pathType: Exact
+        pathType: Prefix
