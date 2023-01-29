@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace poc.Controllers;
 
 [ApiController]
-[Route("api")]
+[Route("s1")]
 public class WeatherForecastController : ControllerBase
 {
     private readonly ILogger<WeatherForecastController> _logger;
