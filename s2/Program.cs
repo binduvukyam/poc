@@ -1,7 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Logging.ClearProviders();
-builder.Services.AddApplicationInsightsTelemetry();
+// builder.Logging.ClearProviders();
+// builder.Services.AddApplicationInsightsTelemetry();
 
 // Add services to the container.
 
