@@ -8,7 +8,7 @@ metadata:
     component: netcore-app
 spec:
   containers:
-    - image: skkpocacr.azurecr.io/s1:v1
+    - image: skkpocacr.azurecr.io/s1:v4
       name: webapi
       ports:
         - containerPort: 80
